@@ -4,62 +4,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyShop - Home</title>
+  <title>My Website - Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>MyShop</h1>
+    <h1>Welcome to My Website</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <h2>Welcome to MyShop</h2>
-      <p>Your one-stop shop for quality products.</p>
+    <section>
+      <h2>Home Page</h2>
+      <p>This is the home page of a simple, responsive website.</p>
+      <img src="images/home.jpg" alt="Welcome banner" class="responsive-img" />
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 MyShop</p>
+    <p>&copy; 2025 My Website</p>
   </footer>
 </body>
 </html>
 
-<!-- products.html -->
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyShop - Products</title>
+  <title>My Website - About</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Our Products</h1>
+    <h1>About Us</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
   <main>
-    <section class="products">
-      <article class="product">
-        <h3>Product 1</h3>
-        <p>High quality and affordable.</p>
-      </article>
-      <article class="product">
-        <h3>Product 2</h3>
-        <p>Best seller of the month.</p>
-      </article>
+    <section>
+      <h2>Who We Are</h2>
+      <p>This page gives information about us.</p>
+      <img src="images/about.jpg" alt="About us image" class="responsive-img" />
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 MyShop</p>
+    <p>&copy; 2025 My Website</p>
   </footer>
 </body>
 </html>
@@ -70,7 +66,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyShop - Contact</title>
+  <title>My Website - Contact</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
@@ -79,13 +75,13 @@
     <h1>Contact Us</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
   <main>
     <section>
-      <h2>Get in Touch</h2>
+      <h2>Send us a message</h2>
       <form id="contactForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
@@ -101,7 +97,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 MyShop</p>
+    <p>&copy; 2025 My Website</p>
   </footer>
 </body>
 </html>
@@ -114,7 +110,7 @@ body {
   line-height: 1.6;
 }
 header {
-  background: #222;
+  background: #333;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -124,7 +120,7 @@ nav a {
   margin: 0 1rem;
   text-decoration: none;
 }
-.hero, .products, form {
+main {
   padding: 2rem;
 }
 footer {
@@ -132,16 +128,6 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-}
-.products {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.product {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background: #fafafa;
 }
 form {
   display: flex;
@@ -153,23 +139,26 @@ input, textarea {
 }
 button {
   padding: 0.5rem;
-  background: #222;
+  background: #333;
   color: white;
   border: none;
   cursor: pointer;
+}
+img.responsive-img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
 }
 @media (max-width: 600px) {
   nav a {
     display: block;
     margin: 0.5rem 0;
   }
-  .products {
-    padding: 1rem;
-  }
 }
 
 // script.js
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  alert("Thanks for reaching out, " + document.getElementById("name").value + "! We'll get back to you soon.");
+  alert("Thank you for your message, " + document.getElementById("name").value + "!");
 });
